@@ -33,7 +33,7 @@ public class Main {
       Map<String, Object> attributes = new HashMap<>();
       attributes.put("message", "Hello World! I can push stuff!!");
       return new ModelAndView(attributes, "create_user.ftl");
-    });
+    }, new FreeMarkerEngine());
 
     get("/", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
