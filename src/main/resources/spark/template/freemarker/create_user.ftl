@@ -5,7 +5,7 @@
 </head>
 
 <body>
-    <h1>Willkommen!</h1>
+    <h1>Ihre Personenangaben:</h1>
     ${welcome_msg}
     <form>
         <label for="vname">Vorname:

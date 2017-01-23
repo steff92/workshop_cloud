@@ -30,6 +30,8 @@ public class Main {
     });
 
     get("/create", (req, res) -> {
+      Map<String, Object> attributes = new HashMap<>();
+      attributes.put("message", "Hello World! I can push stuff!!");
       return new ModelAndView(attributes, "create_user.ftl");
     });
 
