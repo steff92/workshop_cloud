@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>User input</title>
+    <title>Formular</title>
 </head>
 
 <body>
@@ -22,5 +22,4 @@
         <input type="checkbox" id="alter" name="alter"><br>
         <input type="submit" value="senden"><br>
     </form>
-
 </body>
