@@ -31,9 +31,19 @@ public class Main {
 
     get("/create", (req, res) -> {
       Map<String, Object> attributes = new HashMap<>();
-      attributes.put("message", "Hello World! I can push stuff!!");
-      return new ModelAndView(attributes, "create_user.ftl");
+      if (req.params().isEmpty()) {
+        attributes.put("welcome_msg", "Hello World! Enter data");
+
+        return new ModelAndView(attributes, "create_user.ftl");
+      }else{
+        String vname= req.params("vname");
+        attributes.put("welcome_msg", "Hello " + vname);
+        return new ModelAndView(attributes, "create_user.ftl");
+      }
+//      return "E=mc^2: " + energy + " = " + m.toString();
     }, new FreeMarkerEngine());
+
+    post("/create", (req, res) -> req.params("vname"));
 
     get("/", (request, response) -> {
       Map<String, Object> attributes = new HashMap<>();
