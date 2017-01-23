@@ -29,6 +29,10 @@ public class Main {
       return "<html><body><h1>Hello World!</h1></body></html>";
     });
 
+    get("/create", (req, res) -> {
+      return new ModelAndView(attributes, "create_user.ftl");
+    });
+
     get("/", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
             attributes.put("message", "Hello World! I can push stuff!!");
