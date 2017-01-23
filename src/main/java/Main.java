@@ -36,11 +36,10 @@ public class Main {
     }, new FreeMarkerEngine());
 
     get("/", (request, response) -> {
-            Map<String, Object> attributes = new HashMap<>();
-            attributes.put("message", "Hello World! I can push stuff!!");
-
-            return new ModelAndView(attributes, "index.ftl");
-        }, new FreeMarkerEngine());
+      Map<String, Object> attributes = new HashMap<>();
+      attributes.put("message", "Hello World! I can push stuff!!");
+      return new ModelAndView(attributes, "index.ftl");
+    }, new FreeMarkerEngine());
 
     get("/db", (req, res) -> {
       Connection connection = null;
