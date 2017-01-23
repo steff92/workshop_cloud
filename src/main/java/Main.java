@@ -30,7 +30,7 @@ public class Main {
 
       String energy = System.getenv().get("ENERGY");
 
-      Amount<Mass> m = Amount.valueOf(energy).to(KILOGRAM);
+//      Amount<Mass> m = Amount.valueOf(energy).to(KILOGRAM);
       return "Funktioniert";
 //      return "E=mc^2: " + energy + " = " + m.toString();
     });
